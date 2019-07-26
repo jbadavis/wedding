@@ -2,6 +2,9 @@
 @import 'variables';
 @import 'typography';
 
+@import 'components/section';
+@import 'components/footer';
+
 html {
     font-size: 75%;
 }
@@ -10,5 +13,9 @@ body {
   background: $white-one;
   font-family: $body-font-family;
   font-size: 1rem;
+}
+
+div, section {
+  box-sizing: border-box;
 }
 

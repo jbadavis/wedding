@@ -11,13 +11,18 @@ h1, h2, h3, h4, h5 {
   letter-spacing: .01rem;
 }
 
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
 h1 {
   @include font-size(34px);
   margin-bottom: $margin-one;
+  font-weight: 700;
 }
 
 h2 {
-  @include font-size(30px);
+  @include font-size(26px);
   margin-bottom: $margin-two;
 }
 

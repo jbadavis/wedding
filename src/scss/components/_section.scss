@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'mixins';
+
+.mj-section {
+  border-color: $green-one;
+  border-style: solid;
+  border-width: 20px;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+
+  .mj-section-content {
+    @include centre-content;
+
+    text-align: center;
+    width: 80%;
+  }
+}
