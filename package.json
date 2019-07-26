@@ -1,0 +1,29 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "Jack Davis",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "browser-sync": "2.26.7",
+    "del": "5.0.0",
+    "gulp": "4.0.2",
+    "gulp-nunjucks-render": "2.2.3",
+    "gulp-sass": "4.0.2",
+    "node-sass": "4.12.0",
+    "webpack": "4.36.1",
+    "webpack-cli": "3.3.6",
+    "webpack-stream": "5.2.1"
+  },
+  "dependencies": {
+    "jquery": "3.4.1"
+  }
+}
