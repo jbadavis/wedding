@@ -1,0 +1,14 @@
+@import 'reset.css/reset';
+@import 'variables';
+@import 'typography';
+
+html {
+    font-size: 75%;
+}
+
+body {
+  background: $white-one;
+  font-family: $body-font-family;
+  font-size: 1rem;
+}
+

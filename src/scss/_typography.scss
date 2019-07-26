@@ -1,0 +1,40 @@
+@import 'variables';
+
+@mixin font-size($font-size){
+    font-size: $font-size;
+    font-size: ($font-size/$base-font-size)*1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $heading-font-family;
+  text-transform: capitalize;
+  letter-spacing: .01rem;
+}
+
+h1 {
+  @include font-size(34px);
+  margin-bottom: $margin-one;
+}
+
+h2 {
+  @include font-size(30px);
+  margin-bottom: $margin-two;
+}
+
+h3 {
+  @include font-size(24px);
+  margin-bottom: $margin-two;
+}
+
+h4 {
+  @include font-size(16px);
+  margin-bottom: $margin-two;
+}
+
+p {
+  @include font-size(14px);
+  letter-spacing: .03rem;
+  line-height: 1.4rem;
+  margin-bottom: $margin-three;
+}
+
