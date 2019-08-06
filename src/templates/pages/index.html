@@ -1,12 +1,26 @@
-{% extends "base.njk" %}
-
-{% block content %}
+{% extends "base.njk" %} {% block content %}
 <section class="mj-section">
   <div class="mj-section-content">
     <h1>maddie and jack are getting married</h1>
-    <h2>in Highbury, Islington</h2>
-    <h2>on 4th April 2020</h2>
+    <h2>in Highbury, Islington on 4<sup>th</sup> April 2020</h2>
+  </div>
+  <div class="mj-scroll-down">
+    <span class="mj-tag">scroll down</span>
+    <span class="mj-scroll-down-line"></span>
   </div>
 </section>
-{% endblock %} 
-
+<section class="mj-section no-border">
+  <div class="mj-section-content">
+    <h2 class="underlined">When</h2>
+    <p>
+      We're getting married at Christ Church, Highbury on the 4<sup>th</sup> April 2020.
+    </p>
+    <p>
+      This will be followed by a reception at
+      <a href="https://www.claptoncountryclub.co.uk">
+        Clapton Country Club
+      </a>
+    </p>
+  </div>
+</section>
+{% endblock %}

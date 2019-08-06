@@ -1,10 +1,8 @@
-@import 'variables';
-@import 'mixins';
-
 .mj-section {
-  border-color: $green-one;
+  background: $green-one;
+  border-color: $black-one;
   border-style: solid;
-  border-width: 20px;
+  border-width: 10px;
   height: 100vh;
   position: relative;
   width: 100vw;
@@ -12,7 +10,11 @@
   .mj-section-content {
     @include centre-content;
 
-    text-align: center;
+    text-align: left;
     width: 80%;
   }
+}
+
+.no-border {
+  border-width: 0;
 }

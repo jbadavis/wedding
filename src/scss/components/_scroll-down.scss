@@ -1,0 +1,28 @@
+.mj-scroll-down {
+  .mj-tag {
+    animation: up-and-down-down 1.8s ease-in-out 1s infinite alternate;
+    bottom: 25px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+  }
+
+  .mj-scroll-down-line {
+    background: $black-one;
+    bottom: 0;
+    height: 18px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 2.5px;
+  }
+}
+
+@keyframes up-and-down-down {
+  0%, 40% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, -10px);
+  }
+}

@@ -1,29 +1,52 @@
-@import 'variables';
-
-@mixin font-size($font-size){
-    font-size: $font-size;
-    font-size: ($font-size/$base-font-size)*1rem;
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  font-size: ($font-size/$base-font-size) * 1rem;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: $heading-font-family;
   text-transform: capitalize;
-  letter-spacing: .01rem;
+  letter-spacing: 0.01rem;
+
+  &.white {
+    color: $white-one;
+  }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 400;
+  position: relative;
+
 }
 
 h1 {
   @include font-size(34px);
+  line-height: 1.1;
   margin-bottom: $margin-one;
   font-weight: 700;
 }
 
 h2 {
   @include font-size(26px);
-  margin-bottom: $margin-two;
+  line-height: 1.4;
+  margin-bottom: $margin-one;
+
+  &.underlined:after {
+    content: "";
+    background: $black-one;
+    bottom: -6px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    width: 30px;
+  }
 }
 
 h3 {
@@ -37,9 +60,27 @@ h4 {
 }
 
 p {
-  @include font-size(14px);
-  letter-spacing: .03rem;
-  line-height: 1.4rem;
+  @include font-size(16px);
+  color: $black-one;
+  letter-spacing: 0.35px;
+  line-height: 1.4;
   margin-bottom: $margin-three;
 }
 
+a {
+  color: $black-one;
+
+  &:active,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $black-one;
+  }
+}
+
+.mj-tag {
+  font-family: $body-font-family;
+  font-weight: 600;
+  text-transform: uppercase;
+}
