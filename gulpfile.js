@@ -9,6 +9,10 @@ function clean() {
   return del(['./dist']);
 }
 
+function copy() {
+  return gulp.src('./src/img/*').pipe(gulp.dest('./dist/img'));
+}
+
 function browserSync(done) {
   browsersync.init({
     server: {
@@ -16,11 +20,13 @@ function browserSync(done) {
     },
     port: 3000,
   });
+
   done();
 }
 
 function browserSyncReload(done) {
   browsersync.reload();
+
   done();
 }
 function javascript() {
@@ -51,6 +57,7 @@ function nunjucks() {
 }
 
 function watch() {
+  gulp.watch('./src/img/**/*', gulp.series(copy));
   gulp.watch('./src/scss/**/*', gulp.series(css));
   gulp.watch('./src/app/**/*', gulp.series(javascript));
   gulp.watch(
@@ -60,4 +67,7 @@ function watch() {
 }
 
 exports.watch = gulp.parallel(watch, browserSync);
-exports.default = gulp.series(clean, gulp.parallel(nunjucks, css, javascript));
+exports.default = gulp.series(
+  clean,
+  gulp.parallel(copy, nunjucks, css, javascript),
+);
