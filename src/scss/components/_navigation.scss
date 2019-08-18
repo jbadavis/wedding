@@ -1,16 +1,15 @@
 nav {
-  background: $black-one;
+  background: $grey-two;
   height: 100%;
   left: 0;
-  padding: 80px 60px; 
+  padding: 110px 60px; 
   position: fixed;
   top: 0;
-  width: 100%;
+  width: $navigation-width;
 
   & a {
     display: block;
     opacity: 0;
-    margin-bottom: $margin-one;
 
     transition: opacity .4s ease-in;
   }

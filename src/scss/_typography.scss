@@ -94,11 +94,13 @@ a {
 }
 
 nav a {
-  @include font-size(21px);
+  @include font-size(18px);
 
   color: $white-one;
-  font-weight: 600;
-  letter-spacing: 1.2px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
 
   &:active,
   &:link,
@@ -107,10 +109,4 @@ nav a {
   &:active {
     color: $white-one;
   }
-}
-
-.mj-tag {
-  font-family: $body-font-family;
-  font-weight: 600;
-  text-transform: uppercase;
 }

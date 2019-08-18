@@ -1,4 +1,5 @@
 .mj-section {
+  background: $grey-one;
   height: 100vh;
   position: relative;
   width: 100vw;
@@ -6,6 +7,21 @@
   .mj-section-content {
     @include centre-content;
 
+    max-width: 536px
     width: 80%;
+  }
+
+  &.green {
+    background: $green-one;
+  }
+
+  &.border {
+    border-color: $black-one;
+    border-style: solid;
+    border-width: 10px;
+
+    @media (min-width: $breakpoint-one) {
+      border-width: 16px;
+    }
   }
 }
