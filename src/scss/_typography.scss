@@ -28,13 +28,19 @@ h4 {
 
 h1 {
   @include font-size(34px);
+
   line-height: 1.1;
   margin-bottom: $margin-one;
   font-weight: 700;
+
+  @media (min-width: $breakpoint-one) {
+    @include font-size(56px);
+  }
 }
 
 h2 {
   @include font-size(26px);
+
   line-height: 1.4;
   margin-bottom: $margin-one;
 
@@ -47,20 +53,27 @@ h2 {
     left: 0;
     width: 30px;
   }
+
+  @media (min-width: $breakpoint-one) {
+    @include font-size(36px);
+  }
 }
 
 h3 {
   @include font-size(24px);
+
   margin-bottom: $margin-two;
 }
 
 h4 {
   @include font-size(16px);
+
   margin-bottom: $margin-two;
 }
 
-p {
+p, .mj-p {
   @include font-size(16px);
+
   color: $black-one;
   letter-spacing: 0.2;
   line-height: 1.4;
@@ -69,6 +82,7 @@ p {
 
 a {
   color: $black-one;
+  text-decoration: none;
 
   &:active,
   &:link,
@@ -76,6 +90,22 @@ a {
   &:hover,
   &:active {
     color: $black-one;
+  }
+}
+
+nav a {
+  @include font-size(21px);
+
+  color: $white-one;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+
+  &:active,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $white-one;
   }
 }
 

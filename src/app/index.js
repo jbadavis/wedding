@@ -1,5 +1,5 @@
-const sayHi = () => console.log('Hello, World');
+import initialiseListeners from './initialiseListeners';
 
 (() => {
-  sayHi();
+  initialiseListeners();
 })();

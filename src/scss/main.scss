@@ -3,14 +3,19 @@
 @import 'typography';
 @import 'mixins';
 
-@import 'components/section';
 @import 'components/footer';
-@import 'components/scroll-down';
-@import 'components/hero';
 @import 'components/header';
+@import 'components/hero';
+@import 'components/navigation';
+@import 'components/scroll-down';
+@import 'components/section';
 
 html {
-    font-size: 75%;
+  font-size: 75%;
+
+  &.nav-open {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -18,13 +23,26 @@ body {
   color: $black-one;
   font-family: $body-font-family;
   font-size: 1rem;
+
+  .nav-open & {
+    overflow: hidden;
+  }
 }
 
-div, section {
+div,
+section {
   box-sizing: border-box;
 }
 
 button {
-  padding: 0px;
   border: 0px;
+  padding: 0px;
+}
+
+.mj-main {
+  transition: transform 0.7s ease-in-out;
+
+  .nav-open & {
+    transform: translateX($navigation-width);
+  }
 }

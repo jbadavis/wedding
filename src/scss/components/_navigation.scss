@@ -1,0 +1,23 @@
+nav {
+  background: $black-one;
+  height: 100%;
+  left: 0;
+  padding: 80px 60px; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & a {
+    display: block;
+    opacity: 0;
+    margin-bottom: $margin-one;
+
+    transition: opacity .4s ease-in;
+  }
+
+  .nav-open & a {
+    opacity: 1;
+
+    transition: opacity .7s .3s ease-in;
+  }
+}
