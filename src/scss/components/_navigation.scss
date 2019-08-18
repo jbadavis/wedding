@@ -2,21 +2,30 @@ nav {
   background: $grey-two;
   height: 100%;
   left: 0;
-  padding: 110px 60px; 
+  padding: 110px 60px;
   position: fixed;
   top: 0;
   width: $navigation-width;
+  transform: translateX(-$navigation-width);
+
+  transition: 0s transform 0.7s;
 
   & a {
     display: block;
     opacity: 0;
 
-    transition: opacity .4s ease-in;
+    transition: opacity 0.4s ease-in;
   }
 
   .nav-open & a {
     opacity: 1;
 
-    transition: opacity .7s .3s ease-in;
+    transition: opacity 0.7s 0.3s ease-in;
   }
+}
+
+.nav-open nav {
+  transition: 0s transform;
+
+  transform: translateX(0);
 }
