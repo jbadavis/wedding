@@ -44,16 +44,6 @@ h2 {
   line-height: 1.4;
   margin-bottom: $margin-one;
 
-  &.underlined:after {
-    content: "";
-    background: $black-one;
-    bottom: -6px;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    width: 30px;
-  }
-
   @media (min-width: $breakpoint-one) {
     @include font-size(36px);
   }
@@ -72,10 +62,10 @@ h4 {
 }
 
 p, .mj-p {
-  @include font-size(16px);
+  @include font-size(18px);
 
   color: $black-one;
-  letter-spacing: 0.2;
+  letter-spacing: 0.8px;
   line-height: 1.4;
   margin-bottom: $margin-three;
 }
