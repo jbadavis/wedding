@@ -3,6 +3,7 @@ $button-height: 24px;
 .mj-header {
   height: 70px;
   left: 0;
+  padding: 21px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,7 +11,6 @@ $button-height: 24px;
 
   .mj-header-button-wrapper {
     height: $button-height;
-    left: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -26,7 +26,7 @@ $button-height: 24px;
     width: 100%;
 
     transition: all;
-    transition-duration: .6s;
+    transition-duration: 0.6s;
     transition-timing-function: ease-in-out;
   }
 
@@ -55,11 +55,11 @@ $button-height: 24px;
   .mj-header-nav-button,
   .mj-header-nav-button:before,
   .mj-header-nav-button:after {
-    background: $white-one;
+    background: $black-one;
     height: 2px;
     width: 22px;
 
-    transition-duration: .4s;
+    transition-duration: 0.4s;
   }
 
   .mj-header-nav-button {
@@ -72,5 +72,12 @@ $button-height: 24px;
     &:after {
       transform: rotate(-90deg) translateX(11px);
     }
+  }
+}
+
+@media (min-width: $breakpoint-one) {
+  .mj-header {
+    height: 100px;
+    padding: 38px;
   }
 }

@@ -8,11 +8,15 @@
     @include centre-content;
 
     max-width: 536px;
-    width: 80%;
+    width: 70%;
   }
 
   &.green {
     background: $green-one;
+  }
+
+  &.blue {
+    background: $blue-one;
   }
 
   &.border {
