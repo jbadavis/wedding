@@ -15,6 +15,10 @@ $button-height: 24px;
     top: 50%;
     transform: translateY(-50%);
     width: 38px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .mj-header-nav-button,
@@ -28,6 +32,7 @@ $button-height: 24px;
     transition: all;
     transition-duration: 0.6s;
     transition-timing-function: ease-in-out;
+
   }
 
   .mj-header-nav-button {
@@ -55,7 +60,7 @@ $button-height: 24px;
   .mj-header-nav-button,
   .mj-header-nav-button:before,
   .mj-header-nav-button:after {
-    background: $black-one;
+    background: $white-one;
     height: 2px;
     width: 22px;
 

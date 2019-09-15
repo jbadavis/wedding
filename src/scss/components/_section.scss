@@ -9,6 +9,10 @@
 
     max-width: 536px;
     width: 70%;
+
+    &.centre {
+      text-align: center;
+    }
   }
 
   &.green {
@@ -17,6 +21,10 @@
 
   &.blue {
     background: $blue-one;
+  }
+
+  &.pink {
+    background: $pink-one;
   }
 
   &.border {

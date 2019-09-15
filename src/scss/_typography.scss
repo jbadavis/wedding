@@ -33,11 +33,11 @@ h1 {
   @include font-size(34px);
 
   line-height: 1.1;
-  margin-bottom: $margin-one;
+  margin-bottom: $margin-two;
   font-weight: 700;
 
   @media (min-width: $breakpoint-one) {
-    @include font-size(56px);
+    @include font-size(58px);
   }
 }
 
@@ -90,17 +90,17 @@ a {
 nav a {
   @include font-size(18px);
 
-  color: $black-one;
+  color: $white-one;
   letter-spacing: 3.5px;
   margin-bottom: 48px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
 
   &:active,
   &:link,
   &:visited,
   &:hover {
-    color: $black-one;
+    color: $white-one;
   }
 }
 
@@ -115,5 +115,12 @@ p:last-child {
     left: 0px;
     position: absolute;
     width: 40px;
+  }
+}
+
+@media (min-width: $breakpoint-one) {
+  p,
+  .mj-p {
+    @include font-size(20px);
   }
 }
