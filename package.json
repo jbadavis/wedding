@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp && gulp watch",
     "build": "gulp",
-    "deploy": "aws s3 cp dist/ s3://www.maddieandjack.com/ --recursive"
+    "deploy": "aws s3 cp dist/ s3://www.maddieandjack.com/ --recursive --exclude='dist/style-guide'"
   },
   "keywords": [],
   "author": "Jack Davis",
@@ -17,6 +17,7 @@
     "browser-sync": "2.26.7",
     "del": "5.0.0",
     "gulp": "4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-nunjucks-render": "2.2.3",
     "gulp-prettier": "^2.1.0",
     "gulp-sass": "4.0.2",

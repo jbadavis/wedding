@@ -5,6 +5,7 @@ const webpack = require('webpack-stream');
 const del = require('del');
 const sass = require('gulp-sass');
 const prettier = require('gulp-prettier');
+let cleanCss = require('gulp-clean-css');
 
 function clean() {
   return del(['./dist']);
@@ -42,6 +43,7 @@ function css() {
   return gulp
     .src('./src/scss/**/*.scss')
     .pipe(sass({includePaths: ['node_modules']}))
+    .pipe(cleanCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./dist/'))
     .pipe(browsersync.stream());
 }
