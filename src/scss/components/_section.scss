@@ -46,4 +46,20 @@
   &.border {
     border: 16px solid $black-one;
   }
+
+  &.longer {
+    height: 120vh;
+  }
+
+  &:not(:first-of-type):not(:last-of-type):after {
+    background: $black-one;
+    bottom: 0;
+    content: '';
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 2px);
+    width: 145px;
+    z-index: 1;
+  }
 }

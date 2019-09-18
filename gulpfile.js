@@ -4,6 +4,7 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const webpack = require('webpack-stream');
 const del = require('del');
 const sass = require('gulp-sass');
+const prettier = require('gulp-prettier');
 
 function clean() {
   return del(['./dist']);
@@ -53,6 +54,7 @@ function nunjucks() {
         path: ['./src/templates/'],
       }),
     )
+    .pipe(prettier())
     .pipe(gulp.dest('./dist'));
 }
 

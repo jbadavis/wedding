@@ -17,6 +17,7 @@
     "del": "5.0.0",
     "gulp": "4.0.2",
     "gulp-nunjucks-render": "2.2.3",
+    "gulp-prettier": "^2.1.0",
     "gulp-sass": "4.0.2",
     "node-sass": "4.12.0",
     "webpack": "4.36.1",
