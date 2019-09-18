@@ -5,7 +5,9 @@ const webpack = require('webpack-stream');
 const del = require('del');
 const sass = require('gulp-sass');
 const prettier = require('gulp-prettier');
-let cleanCss = require('gulp-clean-css');
+const cleanCss = require('gulp-clean-css');
+
+const content = require('./content.json');
 
 function clean() {
   return del(['./dist']);
@@ -50,10 +52,11 @@ function css() {
 
 function nunjucks() {
   return gulp
-    .src('./src/templates/pages/**/*.html', {base: './src/templates/pages'})
+    .src('./src/templates/pages/**/*.html')
     .pipe(
       nunjucksRender({
         path: ['./src/templates/'],
+        data: content,
       }),
     )
     .pipe(prettier())

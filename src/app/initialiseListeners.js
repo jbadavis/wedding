@@ -4,9 +4,9 @@ import initScrollHandler from './handlers/scrollHandler';
 
 const initialiseListeners = () => {
   const scrollHandler = initScrollHandler();
-  const headerHandler = initHeaderHandler()
+  const headerHandler = initHeaderHandler();
 
-  scrollHandler()
+  scrollHandler();
 
   $(window).scroll(scrollHandler);
   $('.mj-header-button-wrapper').click(headerHandler);
