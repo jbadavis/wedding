@@ -19,10 +19,6 @@ body {
   color: $black-one;
   font-family: $body-font-family;
   font-size: 1rem;
-
-  &.nav-open {
-    overflow: hidden;
-  }
 }
 
 div,

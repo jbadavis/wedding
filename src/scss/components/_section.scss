@@ -55,4 +55,12 @@
     width: 145px;
     z-index: 1;
   }
+
+  @media (max-width: 896px) and (orientation: landscape) {
+    height: 200vh;
+
+    &.longer {
+      height: 200vh;
+    }
+  }
 }
