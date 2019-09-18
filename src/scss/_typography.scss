@@ -6,7 +6,6 @@
 h1,
 h2,
 h3,
-h4,
 h5 {
   font-family: $heading-font-family;
   text-transform: capitalize;
@@ -19,8 +18,7 @@ h5 {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-weight: 400;
   position: relative;
 
@@ -30,10 +28,10 @@ h4 {
 }
 
 h1 {
-  @include font-size(34px);
+  @include font-size(36px);
 
   line-height: 1.1;
-  margin-bottom: $margin-two;
+  margin-bottom: $margin-three;
   font-weight: 700;
 
   @media (min-width: $breakpoint-one) {
@@ -42,10 +40,10 @@ h1 {
 }
 
 h2 {
-  @include font-size(26px);
+  @include font-size(28px);
 
-  line-height: 1.4;
-  margin-bottom: $margin-two;
+  line-height: 1.2;
+  margin-bottom: $margin-one;
 
   @media (min-width: $breakpoint-one) {
     @include font-size(36px);
@@ -53,15 +51,14 @@ h2 {
 }
 
 h3 {
-  @include font-size(24px);
+  @include font-size(22px);
 
-  margin-bottom: $margin-three;
-}
+  font-weight: 700;
+  margin-bottom: $margin-two;
 
-h4 {
-  @include font-size(16px);
-
-  margin-bottom: $margin-three;
+  @media (min-width: $breakpoint-one) {
+    @include font-size(26px);
+  }
 }
 
 p,
@@ -71,20 +68,20 @@ p,
   color: $black-one;
   letter-spacing: 0.8px;
   line-height: 1.4;
-  margin-bottom: $margin-three;
+  margin-bottom: $margin-two;
 
   &:last-child {
     position: relative;
-    padding-bottom: 13px;
+    padding-bottom: $margin-four;
 
-    &:after {
-      border-bottom: 3px solid $black-one;
-      bottom: -30px;
-      content: '';
-      left: 0px;
-      position: absolute;
-      width: 40px;
-    }
+    // &:after {
+    //   border-bottom: 3px solid $black-one;
+    //   bottom: -30px;
+    //   content: '';
+    //   left: 0px;
+    //   position: absolute;
+    //   width: 40px;
+    // }
   }
 }
 

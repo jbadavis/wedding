@@ -1,5 +1,19 @@
 footer {
   background: $black-two;
-  height: 20vh;
+  height: 100px;
   width: 100%;
+  position: relative;
+
+
+  .mj-footer-copy {
+    @include centre-content;
+
+    color: $white-one;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+    max-width: 536px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 72%;
+  }
 }
