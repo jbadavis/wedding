@@ -20,7 +20,7 @@ body {
   font-family: $body-font-family;
   font-size: 1rem;
 
-  .nav-open & {
+  & .nav-open {
     overflow: hidden;
   }
 }
