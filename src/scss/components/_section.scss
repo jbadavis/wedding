@@ -9,10 +9,14 @@
     @include centre-content;
 
     max-width: 536px;
-    width: 72%;
+    width: 82%;
 
     &.centre {
       text-align: center;
+    }
+
+    @media (min-width: $breakpoint-one) {
+      width: 72%;
     }
   }
 
