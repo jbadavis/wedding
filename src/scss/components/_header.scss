@@ -10,6 +10,7 @@ $button-height: 24px;
   z-index: 1;
 
   .mj-header-button-wrapper {
+    cursor: pointer;
     height: $button-height;
     position: absolute;
     top: 50%;
