@@ -1,5 +1,5 @@
 .mj-scroll-down {
-  animation: up-and-down-down 1.8s ease-in-out 1s infinite alternate;
+  animation: up-and-down-down 1.4s ease-in-out 1s infinite alternate;
   bottom: 130px;
   left: 50%;
   position: absolute;
@@ -29,6 +29,6 @@
     transform: translate(-50%, 0);
   }
   100% {
-    transform: translate(-50%, -10px);
+    transform: translate(-50%, -15px);
   }
 }

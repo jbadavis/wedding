@@ -38,6 +38,10 @@
 
   &.longer {
     height: 120vh;
+
+    @media (min-width: $breakpoint-two) {
+      height: 100vh;
+    }
   }
 
   &:not(:first-of-type):not(:last-of-type):after {

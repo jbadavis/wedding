@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp && gulp watch",
-    "build": "gulp"
+    "build": "gulp",
+    "deploy": "aws s3 cp dist/ s3://www.maddieandjack.com/ --recursive"
   },
   "keywords": [],
   "author": "Jack Davis",
