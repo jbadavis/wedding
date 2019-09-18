@@ -8,7 +8,7 @@
   .mj-section-content {
     @include centre-content;
 
-    max-width: 536px;
+    max-width: 552px;
     width: 82%;
 
     &.centre {
@@ -17,17 +17,6 @@
 
     @media (min-width: $breakpoint-one) {
       width: 72%;
-    }
-  }
-
-  .mj-section-content {
-    &:after {
-      border-bottom: 3px solid $black-one;
-      bottom: -30px;
-      content: '';
-      left: 0px;
-      position: absolute;
-      width: 40px;
     }
   }
 
