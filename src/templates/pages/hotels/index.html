@@ -8,94 +8,18 @@
 <section class="mj-section blue longer">
   <div class="mj-section-content">
     <h2 class="bold">Hotels</h2>
-    <h3>Premier Inn</h3>
+    {% for hotel in hotels %}
+    <h3>{{hotel.title}}</h3>
     <ul>
+      {% for location in hotel.locations %}
       <li>
-        <a target="_blank" href="https://goo.gl/maps/vBC88ugWm1A17we78">
-          Hackney.
+        <a target="_blank" href="{{ location.link }}">
+          {{ location.title }}
         </a>
       </li>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/ouKZA5HkQe4Wb2TM6">
-          Angel.
-        </a>
-      </li>
-      <!-- <li> -->
-      <!--   <a target="_blank" href="https://goo.gl/maps/CPr1ZX3wDERrpW6d9"> -->
-      <!--     Stratford. -->
-      <!--   </a> -->
-      <!-- </li> -->
-      <!-- <li> -->
-      <!--   <a target="_blank" href="https://goo.gl/maps/2XKhsKEUu3NKP7S99"> -->
-      <!--     London City. -->
-      <!--   </a> -->
-      <!-- </li> -->
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/319NKd38rxFS48Eh9">
-          Hackney.
-        </a>
-      </li>
-    </ul>
-    <h3>Travelodge</h3>
-    <ul>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/UguAn4MjLV5zp7WY7">
-          Finsbury Park.
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/B1My6CZ6kenkCDoZ6">
-          Central City Road.
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/dsLuKDnvqzNjaA5R8">
-          Liverpool Street.
-        </a>
-      </li>
-      <!-- <li> -->
-      <!--   <a target="_blank" href="https://goo.gl/maps/KQqL8Ur3Q6NMxQMF9"> -->
-      <!--     London City. -->
-      <!--   </a> -->
-      <!-- </li> -->
-    </ul>
-    <h3>Hilton</h3>
-    <ul>
-      <li>
-        <a
-          target="_blank"
-          href="https://g.page/HiltonLondonAngelIslington?share"
-        >
-          Angel.
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          href="https://g.page/DoubleTreeLondonIslington?share"
-        >
-          Islington (Double Tree).
-        </a>
-      </li>
-    </ul>
-    <h3>Holiday Inn</h3>
-    <ul>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/FEDkGkQB5hR3qpUFA">
-          Whitechapel.
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/atT6jJmi9Deu4GPY8">
-          City (Express).
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://goo.gl/maps/gKmWTbnewrGJVgzA7">
-          Stratford (Express).
-        </a>
-      </li>
-    </ul>
+      {% endfor %}
+      </ul>
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

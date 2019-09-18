@@ -1,3 +1,96 @@
 {
-  "pageTitle": "Jack and Maddie"
+  "pageTitle": "Wedding Vibes",
+  "hotels": [
+    {
+      "title": "Premier Inn",
+      "locations": [
+        {
+          "title": "Hackney.",
+          "link": "https://goo.gl/maps/vBC88ugWm1A17we78"
+        },
+        {
+          "title": "Angel.",
+          "link": "https://goo.gl/maps/ouKZA5HkQe4Wb2TM6"
+        },
+        {
+          "title": "London City.",
+          "link": "https://goo.gl/maps/2XKhsKEUu3NKP7S99"
+        }
+      ]
+    },
+    {
+      "title": "Travelodge",
+      "locations": [
+        {
+          "title": "Finsbury Park.",
+          "link": "https://goo.gl/maps/JgtY14qnYqCeWQ3k9"
+        },
+        {
+          "title": "Central City Road.",
+          "link": "https://goo.gl/maps/B1My6CZ6kenkCDoZ6"
+        },
+        {
+          "title": "Liverpool Street.",
+          "link": "https://goo.gl/maps/dsLuKDnvqzNjaA5R8"
+        }
+      ]
+    },
+    {
+      "title": "Holiday Inn",
+      "locations": [
+        {
+          "title": "Whitechapel.",
+          "link": "https://goo.gl/maps/FEDkGkQB5hR3qpUFA"
+        },
+        {
+          "title": "City (Express).",
+          "link": "https://goo.gl/maps/atT6jJmi9Deu4GPY8"
+        },
+        {
+          "title": "Stratford (Express)",
+          "link": "https://goo.gl/maps/gKmWTbnewrGJVgzA7"
+        }
+      ]
+    },
+    {
+      "title": "Hilton",
+      "locations": [
+        {
+          "title": "Angel.",
+          "link": "https://g.page/HiltonLondonAngelIslington?share"
+        },
+        {
+          "title": "Islington (Double Tree)",
+          "link": "https://g.page/DoubleTreeLondonIslington?share"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "title": "Home",
+      "link": "/",
+      "newPage": false
+    },
+    {
+      "title": "Travel",
+      "link": "/travel",
+      "newPage": false
+    },
+    {
+      "title": "Hotels",
+      "link": "/hotels",
+      "newPage": false
+    },
+    {
+      "title": "Gifts",
+      "link": "#",
+      "newPage": false
+    },
+    {
+      "title": "RSVP",
+      "link": "https://docs.google.com/forms/d/161Dwv87V7es4kfJW87RX0FC5uruhm0ucTW7EAjBGIOU",
+      "newPage": true
+    }
+  ]
 }
