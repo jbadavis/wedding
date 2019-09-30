@@ -1,0 +1,43 @@
+.mj-button {
+  @include font-size(12px);
+
+  border: 2px solid $black-one;
+  display: inline-block;
+  letter-spacing: 2.3px;
+  font-weight: 700;
+  margin-bottom: $margin-two;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: $blue-one;
+    z-index: -1;
+    width: 0px;
+
+    transition: width 0.4s ease-in-out;
+  }
+
+  &.green:before {
+    background: $green-one;
+    
+  }
+
+  &.pink:before {
+    background: $pink-one;
+  }
+
+
+  &:hover:before {
+    width: 100%;
+  }
+
+  @media (min-width: $breakpoint-two) {
+    @include font-size(13px);
+  }
+}

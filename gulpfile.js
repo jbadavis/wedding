@@ -68,7 +68,7 @@ function watch() {
   gulp.watch('./src/scss/**/*', gulp.series(css));
   gulp.watch('./src/app/**/*', gulp.series(javascript));
   gulp.watch(
-    ['./src/templates/**/*'],
+    ['./src/templates/**/*', './content.json'],
     gulp.series(nunjucks, browserSyncReload),
   );
 }

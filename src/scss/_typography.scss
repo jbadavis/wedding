@@ -58,7 +58,7 @@ h3 {
 
   font-weight: 700;
   margin-bottom: $margin-two;
-  padding-top: $margin-two;
+  padding-top: $margin-four;
 
   @media (min-width: $breakpoint-two) {
     @include font-size(26px);
@@ -72,7 +72,11 @@ p,
   color: $black-one;
   letter-spacing: 0.7px;
   line-height: 1.6;
-  margin-bottom: $margin-four;
+  margin-bottom: $margin-two;
+
+  &:last-child {
+    margin-bottom: $margin-one;
+  }
 }
 
 a {
@@ -110,6 +114,7 @@ a {
 
 ul {
   list-style: disc inside;
+  margin-bottom: $margin-two;
 }
 
 li {
@@ -128,6 +133,6 @@ li {
   li a,
   p,
   .mj-p {
-    @include font-size(20px);
+    @include font-size(18px);
   }
 }
