@@ -1,30 +1,30 @@
 import $ from 'jquery';
 
-const isElementInViewport = (el) => {
-  const rect = el.getBoundingClientRect();
+const isElementInViewport = el => {
+    const {top, bottom, left, right} = el.getBoundingClientRect();
+    const {innnerHeight, innerWidth} = window;
+    const {
+        documentElement: {clientHeight, clientWidth},
+    } = document;
 
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight ||
-        document.documentElement.clientHeight) &&
-    rect.right <=
-      (window.innerWidth ||
-        document.documentElement.clientWidth) 
-  );
-}
+    return (
+        top >= 0 &&
+        left >= 0 &&
+        bottom <= (innerHeight || clientHeight) &&
+        right <= (innerWidth || clientWidth)
+    );
+};
 
 const initScrollHandler = () => {
-  const elmsToAnimate = $('.animate-in');
+    const elmsToAnimate = $('.animate-in');
 
-  return () => {
-    elmsToAnimate.each((i, elm) => {
-      if (isElementInViewport(elm)) {
-        $(elm).addClass('animate');
-      }
-    });
-  };
+    return () => {
+        elmsToAnimate.each((i, elm) => {
+            if (isElementInViewport(elm)) {
+                $(elm).addClass('animate');
+            }
+        });
+    };
 };
 
 export default initScrollHandler;
