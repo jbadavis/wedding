@@ -18,10 +18,10 @@
   <body>
     {% include "partials/navigation.njk" %} 
     {% include "partials/header.njk" %} 
-    <div class="mj-main">
+    <main class="mj-main">
       {% block content %} {% endblock %}
       {% include "partials/footer.njk" %}
-    </div>
+    </main>
     <script src="/bundle.js"></script>
   </body>
 </html>
