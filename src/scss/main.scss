@@ -11,6 +11,10 @@
 @import 'components/section';
 @import 'components/buttons';
 
+html.nav-open {
+  overflow: hidden;
+}
+
 html {
   font-size: 75%;
 }

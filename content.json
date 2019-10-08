@@ -73,8 +73,13 @@
       "newPage": false
     },
     {
-      "title": "Travel",
-      "link": "/travel",
+      "title": "Ceremony",
+      "link": "/ceremony",
+      "newPage": false
+    },
+    {
+      "title": "Reception",
+      "link": "/reception",
       "newPage": false
     },
     {
@@ -86,11 +91,6 @@
       "title": "Gifts",
       "link": "#",
       "newPage": false
-    },
-    {
-      "title": "RSVP",
-      "link": "https://docs.google.com/forms/d/161Dwv87V7es4kfJW87RX0FC5uruhm0ucTW7EAjBGIOU",
-      "newPage": true
     }
   ]
 }

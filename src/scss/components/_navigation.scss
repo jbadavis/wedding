@@ -15,7 +15,7 @@
 
     color: $black-one;
     display: inline-block;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 3.5px;
     margin-bottom: 48px;
     opacity: 0;
@@ -24,6 +24,10 @@
     position: relative;
 
     transition: opacity 0.4s ease-in;
+
+    &.current {
+      font-weight: 700;
+    }
 
     &:after {
       background: $black-one;

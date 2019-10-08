@@ -6,24 +6,20 @@
 h1,
 h2,
 h3 {
+  color: $black-one;
   font-family: $heading-font-family;
-  text-transform: capitalize;
+  font-weight: 400;
   letter-spacing: 0.01rem;
+  position: relative;
+  text-transform: capitalize;
+
+  &.no-capitalize {
+    text-transform: none;
+  }
 
   &.white {
     color: $white-one;
   }
-
-  &.bold {
-    font-weight: 700;
-  }
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 400;
-  position: relative;
 
   &.bold {
     font-weight: 700;
@@ -72,7 +68,7 @@ p,
   color: $black-one;
   letter-spacing: 0.7px;
   line-height: 1.6;
-  margin-bottom: $margin-two;
+  margin-bottom: $margin-three;
 
   &:last-child {
     margin-bottom: $margin-one;

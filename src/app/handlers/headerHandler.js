@@ -7,7 +7,7 @@ import {
 
 const initHeaderHandler = () => {
   const targetElement = $('#nav')[0];
-  const $body = $('body');
+  const $body = $('html');
 
   let navOpen = false;
 

@@ -5,10 +5,11 @@
   display: inline-block;
   letter-spacing: 2.3px;
   font-weight: 700;
-  margin-bottom: $margin-two;
+  margin-bottom: $margin-one;
   padding: 10px 12px;
   text-transform: uppercase;
   position: relative;
+  text-decoration: none;
 
   &:before {
     content: '';
