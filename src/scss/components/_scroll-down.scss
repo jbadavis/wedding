@@ -1,8 +1,7 @@
 #scroll-down {
-  animation: fade-in 0.7s ease-in-out 1.4s forwards, up-and-down-down 1.4s ease-in-out 1s infinite alternate;
+  animation: up-and-down-down 1.4s ease-in-out 1s infinite alternate;
   bottom: 130px;
   left: 50%;
-  opacity: 0;
   position: absolute;
   transform: translate(-50%, 0);
 
