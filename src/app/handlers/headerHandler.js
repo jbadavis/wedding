@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -6,18 +5,18 @@ import {
 } from 'body-scroll-lock';
 
 const initHeaderHandler = () => {
-  const targetElement = $('#nav')[0];
-  const $body = $('html');
+  const navEl = document.getElementById('nav');
+  const htmlEl = document.getElementsByTagName('html')[0];
 
   let navOpen = false;
 
   return () => {
-    $body.toggleClass('nav-open');
+    htmlEl.classList.toggle('nav-open');
 
     if (navOpen) {
-      enableBodyScroll(targetElement);
+      enableBodyScroll(navEl);
     } else {
-      disableBodyScroll(targetElement);
+      disableBodyScroll(navEl);
     }
 
     navOpen = !navOpen;

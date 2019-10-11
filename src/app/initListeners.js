@@ -1,15 +1,16 @@
-import $ from 'jquery';
-import initHeaderHandler from './handlers/headerHandler';
-import initScrollHandler from './handlers/scrollHandler';
+import headerHandler from './handlers/headerHandler';
+import scrollHandler from './handlers/scrollHandler';
 
 const initialiseListeners = () => {
-  const scrollHandler = initScrollHandler();
-  const headerHandler = initHeaderHandler();
+  const initialisedScrollHandler = scrollHandler()
+  const headerButton = document.getElementById(
+    'nav-toggle',
+  );
 
-  scrollHandler();
+  initialisedScrollHandler()
 
-  $(window).scroll(scrollHandler);
-  $('.mj-header-button-wrapper').click(headerHandler);
+  window.addEventListener('scroll', initialisedScrollHandler);
+  headerButton.addEventListener('click', headerHandler());
 };
 
 export default initialiseListeners;

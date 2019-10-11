@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import {parse} from 'url';
 
 const parsePath = path =>
@@ -8,9 +7,10 @@ const parsePath = path =>
     .pop();
 
 const setPage = () => {
+  const navLinks = document.getElementsByClassName('mj-nav-link');
   const {path} = parse(window.location.href);
 
-  $('.mj-nav-link').each((i, link) => {
+  [...navLinks].forEach(link => {
     if (
       parsePath(link.getAttribute('href')) === parsePath(path.toLowerCase())
     ) {

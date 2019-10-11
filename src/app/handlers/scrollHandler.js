@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 const isElementInViewport = (el, offset = 0.8) => {
   const {top} = el.getBoundingClientRect();
   const {innerHeight} = window;
@@ -15,17 +13,17 @@ const isElementOutOfViewport = el => {
 };
 
 const initScrollHandler = () => {
-  const $elsToAnimate = $('.animate');
-  const $scrollDownEl = $('.mj-scroll-down');
+  const elsToAnimate = document.getElementsByClassName('animate');
+  const scrollDownEl = document.getElementById('scroll-down');
 
   return () => {
-    $elsToAnimate.each((i, el) => {
+    [...elsToAnimate].forEach(el => {
       if (isElementInViewport(el)) {
         el.classList.add('show');
       }
     });
 
-    $scrollDownEl.toggleClass('hide', isElementOutOfViewport($scrollDownEl[0]));
+    scrollDownEl.classList.toggle('hide', isElementOutOfViewport(scrollDownEl));
   };
 };
 
