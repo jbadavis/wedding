@@ -1,9 +1,9 @@
 footer {
-  background: $black-two;
+  background: $black-one;
   height: 100px;
   width: 100%;
   position: relative;
-
+  z-index: 0;
 
   .mj-footer-copy {
     @include centre-content;
