@@ -1,26 +1,30 @@
 {% extends "base.njk" %} {% block content %}
 <section class="mj-section pink border">
-  <div class="mj-hero-content animate-in centre">
-    <h1>Hotels</h1>
-    <h2>Where to stay</h2>
+  <div class="mj-hero-content centre">
+    <div class="animate animate-hero">
+      <h1>Hotels</h1>
+      <h2>Where to stay</h2>
+    </div>
   </div>
   <span class="mj-scroll-down"></span>
 </section>
 <section class="mj-section blue longer">
   <div class="mj-section-content">
-    <h2 class="bold">Hotels</h2>
-    {% for hotel in hotels %}
-    <h3>{{hotel.title}}</h3>
-    <ul>
-      {% for location in hotel.locations %}
-      <li>
-        <a target="_blank" href="{{ location.link }}">
-          {{ location.title }}
-        </a>
-      </li>
+    <div class="animate animate-in">
+      <h2 class="bold">Hotels</h2>
+      {% for hotel in hotels %}
+      <h3>{{hotel.title}}</h3>
+      <ul>
+        {% for location in hotel.locations %}
+        <li>
+          <a target="_blank" href="{{ location.link }}">
+            {{ location.title }}
+          </a>
+        </li>
+        {% endfor %}
+        </ul>
       {% endfor %}
-      </ul>
-    {% endfor %}
+    </div>
   </div>
 </section>
 {% endblock %}

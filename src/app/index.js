@@ -1,9 +1,7 @@
 import setPage from './setPage';
-import initialiseListeners from './initialiseListeners';
-import initialiseAnimations from './initialiseAnimations';
+import initListeners from './initListeners';
 
 (() => {
   setPage();
-  initialiseAnimations();
-  initialiseListeners();
+  initListeners();
 })();

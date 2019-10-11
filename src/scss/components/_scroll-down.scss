@@ -5,9 +5,11 @@
   position: absolute;
   transform: translate(-50%, 0);
 
+  transition: opacity 0.4s ease-in-out;
+
   &:before,
   &:after {
-    content: "";
+    content: '';
     background: $black-one;
     bottom: 0;
     height: 18px;
@@ -16,16 +18,21 @@
   }
 
   &:before {
-    transform: rotate(55deg) translateX(10px); 
+    transform: rotate(55deg) translateX(10px);
   }
 
   &:after {
-    transform: rotate(-55deg) translateX(-10px); 
+    transform: rotate(-55deg) translateX(-10px);
+  }
+
+  &.hide {
+    opacity: 0;
   }
 }
 
 @keyframes up-and-down-down {
-  0%, 40% {
+  0%,
+  40% {
     transform: translate(-50%, 0);
   }
   100% {

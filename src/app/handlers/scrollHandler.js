@@ -1,30 +1,32 @@
 import $ from 'jquery';
 
-const isElementInViewport = el => {
-    const {top, bottom, left, right} = el.getBoundingClientRect();
-    const {innnerHeight, innerWidth} = window;
-    const {
-        documentElement: {clientHeight, clientWidth},
-    } = document;
+const isElementInViewport = (el, offset = 0.8) => {
+  const {top} = el.getBoundingClientRect();
+  const {innerHeight} = window;
 
-    return (
-        top >= 0 &&
-        left >= 0 &&
-        bottom <= (innerHeight || clientHeight) &&
-        right <= (innerWidth || clientWidth)
-    );
+  return top <= innerHeight * offset;
+};
+
+const isElementOutOfViewport = el => {
+  const {bottom} = el.getBoundingClientRect();
+  const {innerHeight} = window;
+
+  return bottom <= innerHeight * 0.7;
 };
 
 const initScrollHandler = () => {
-    const elmsToAnimate = $('.animate-in');
+  const $elsToAnimate = $('.animate');
+  const $scrollDownEl = $('.mj-scroll-down');
 
-    return () => {
-        elmsToAnimate.each((i, elm) => {
-            if (isElementInViewport(elm)) {
-                $(elm).addClass('animate');
-            }
-        });
-    };
+  return () => {
+    $elsToAnimate.each((i, el) => {
+      if (isElementInViewport(el)) {
+        el.classList.add('show');
+      }
+    });
+
+    $scrollDownEl.toggleClass('hide', isElementOutOfViewport($scrollDownEl[0]));
+  };
 };
 
 export default initScrollHandler;
