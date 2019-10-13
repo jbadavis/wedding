@@ -5,7 +5,7 @@
   display: inline-block;
   letter-spacing: 2.3px;
   font-weight: 700;
-  margin: 3px 0 $margin-three;
+  margin: 5px 0 $margin-three;
   padding: 10px 12px;
   text-transform: uppercase;
   position: relative;
@@ -19,7 +19,7 @@
     height: 100%;
     background: $blue-one;
     z-index: -1;
-    width: 0px;
+    width: 100%;
 
     transition: width 0.3s ease-in-out;
   }
@@ -32,11 +32,17 @@
     background: $pink-one;
   }
 
-  &:hover:before {
-    width: 100%;
-  }
-
   @media (min-width: $breakpoint-two) {
     @include font-size(13px);
+
+    &:before {
+      width: 0px;
+
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
   }
 }
