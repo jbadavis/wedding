@@ -21,6 +21,10 @@
     }
   }
 
+  &:hover {
+    transform: translateY(-6px);
+  }
+
   @media (min-width: $breakpoint-two) {
     bottom: 40px;
     right: 40px;
@@ -28,9 +32,5 @@
     .mj-button {
       @include font-size(16px);
     }
-  }
-
-  &:hover {
-    transform: translateY(-6px);
   }
 }

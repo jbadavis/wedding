@@ -1,31 +1,40 @@
 #scroll-down {
-  animation: up-and-down-down 1.4s ease-in-out 1s infinite alternate;
   bottom: 130px;
+  cursor: pointer;
+  height: 40px;
   left: 50%;
   position: absolute;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  width: 40px;
 
-  transition: opacity 0.4s ease-in-out;
+  .scroll-down-arrow {
+    @include centre-content;
 
-  &:before,
-  &:after {
-    content: '';
-    background: $black-one;
-    bottom: 0;
-    height: 18px;
-    position: absolute;
-    width: 5px;
-  }
+    animation: up-and-down-down 1.4s ease-in-out 1s infinite alternate;
 
-  &:before {
-    transform: rotate(55deg) translateX(10px);
-  }
+    transition: opacity 0.4s ease-in-out;
 
-  &:after {
-    transform: rotate(-55deg) translateX(-10px);
-  }
+    &:before,
+    &:after {
+      background: $black-one;
+      content: '';
+      height: 18px;
+      left: -2px;
+      position: absolute;
+      top: -15px;
+      width: 5px;
+    }
 
-  &.hide {
-    opacity: 0;
+    &:before {
+      transform: rotate(55deg) translateX(10px);
+    }
+
+    &:after {
+      transform: rotate(-55deg) translateX(-10px);
+    }
+
+    &.hide {
+      opacity: 0;
+    }
   }
 }
