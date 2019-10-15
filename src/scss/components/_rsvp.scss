@@ -4,25 +4,12 @@
   opacity: 0;
   position: fixed;
   right: 30px;
-
-  transition: transform 0.7s;
   
   .mj-button {
     @include font-size(14px);
 
-    background: $black-one;
-    border-color: $grey-one;
-    color: $grey-one;
     margin: 0;
-    padding: 16px 18px;
-
-    &:before {
-      display: none;
-    }
-  }
-
-  &:hover {
-    transform: translateY(-6px);
+    padding: 18px;
   }
 
   @media (min-width: $breakpoint-two) {

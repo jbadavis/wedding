@@ -1,48 +1,50 @@
 .mj-button {
   @include font-size(12px);
 
-  border: 2px solid $black-one;
+  background: $black-one;
+  color: $grey-one;
   display: inline-block;
-  letter-spacing: 2.3px;
   font-weight: 700;
+  letter-spacing: 2.3px;
   margin: 5px 0 $margin-three;
-  padding: 10px 12px;
-  text-transform: uppercase;
+  padding: 13px;
   position: relative;
   text-decoration: none;
+  text-transform: uppercase;
+
+  &:link,
+  &:visited,
+  &:hover {
+    color: $white-one;
+  }
+
+  &:active {
+    background: $grey-two;
+  }
 
   &:before {
+    background: $grey-one;
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
     height: 100%;
-    background: $blue-one;
-    z-index: -1;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(3px, 3px);
     width: 100%;
+    z-index: -1;
 
-    transition: width 0.3s ease-in-out;
-  }
-
-  &.green:before {
-    background: $green-one;
-  }
-
-  &.pink:before {
-    background: $pink-one;
+    transition: transform 0.3s ease-in-out;
   }
 
   @media (min-width: $breakpoint-two) {
     @include font-size(13px);
 
     &:before {
-      width: 0px;
-
-      transition: width 0.3s ease-in-out;
+      transform: translate(0, 0);
     }
 
     &:hover:before {
-      width: 100%;
+      transform: translate(3px, 3px)
     }
   }
 }
