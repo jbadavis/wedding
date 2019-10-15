@@ -22,6 +22,10 @@
 
   .mj-section-copy {
     margin-bottom: $margin-one;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &.green {
