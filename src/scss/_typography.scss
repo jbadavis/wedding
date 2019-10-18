@@ -30,11 +30,12 @@ h1 {
   @include font-size(36px);
 
   line-height: 1.1;
-  margin-bottom: $margin-three;
+  margin-bottom: $margin-four;
   font-weight: 700;
 
   @media (min-width: $breakpoint-two) {
     @include font-size(58px);
+    margin-bottom: $margin-four;
   }
 }
 
@@ -67,7 +68,7 @@ p,
   color: $black-one;
   letter-spacing: 0.7px;
   line-height: 1.6;
-  margin-bottom: $margin-three;
+  margin-bottom: $margin-four;
 }
 
 a {
