@@ -1,6 +1,6 @@
 import headerHandler from './handlers/headerHandler';
-import scrollHandler from './handlers/scrollHandler';
 import scrollDownHandler from './handlers/scrollDownHandler';
+import scrollHandler from './handlers/scrollHandler/';
 
 const initialiseListeners = () => {
   const initialisedScrollHandler = scrollHandler();
