@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="/main.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,700&display=swap"
+      rel="stylesheet"
+    />
     <title>{{ pageTitle }}</title>
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta
+      property="og:description"
+      content="All of the information for our wedding day"
+    />
+    <meta
+      property="og:image"
+      content=""
+    />
+    <meta
+      property="og:url"
+      content="https://www.maddieandjack.com"
+    />
     <script>
-      window.onpageshow = function(event) { 
+      window.onpageshow = function(event) {
         if (event.persisted) {
-          window.location.reload(); 
-        } 
+          window.location.reload();
+        }
       };
     </script>
   </head>
   <body>
-    {% include "partials/navigation.njk" %} 
-    {% include "partials/header.njk" %} 
+    {% include "partials/navigation.njk" %} {% include "partials/header.njk" %}
     <main class="mj-main">
-      {% block content %} {% endblock %}
-      {% include "partials/footer.njk" %}
+      {% block content %} {% endblock %} {% include "partials/footer.njk" %}
     </main>
     {% include "partials/rsvp.njk" %}
     <script src="/bundle.js"></script>
