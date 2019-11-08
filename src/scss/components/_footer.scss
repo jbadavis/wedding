@@ -1,6 +1,6 @@
 #footer {
   background: $black-one;
-  height: 108px;
+  height: 135px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -8,7 +8,7 @@
   .mj-footer-copy {
     @include centre-content;
 
-    color: $white-one;
+    color: $grey-one;
     font-weight: 700;
     letter-spacing: 2.3px;
     max-width: 536px;

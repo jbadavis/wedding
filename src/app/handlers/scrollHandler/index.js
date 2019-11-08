@@ -10,7 +10,7 @@ const initScrollHandler = () => {
 
   return () => {
     animateOnScroll(elsToAnimate);
-    fixRsvp();
+    // fixRsvp();
 
     scrollDownEl.classList.toggle('hide', isElementOutOfViewport(scrollDownEl));
   };
