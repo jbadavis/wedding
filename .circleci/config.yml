@@ -11,12 +11,55 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
-          name: install
+          name: install npm packages
           command: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: build
+          name: build 
           command: npm run build
+
+  deploy:
+    docker:
+      - image: circleci/node:9.11.2
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: install npm packages
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: install aws-cli
+          command: |
+            export PATH=/home/circleci/.local/bin:$PATH
+            sudo apt-get -y -qq update
+            sudo apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            pip install awscli --upgrade --user
+      - run:
+          name: deploy
+          command: npm run deploy
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - hold: 
+          type: approval 
+          requires: 
+           - build
+      - deploy:
+          requires:
+            - hold
