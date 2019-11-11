@@ -1,5 +1,5 @@
 import headerHandler from './handlers/headerHandler';
-import scrollDownHandler from './handlers/scrollDownHandler';
+import clickToScrollHandler from './handlers/clickToScrollHandler';
 import scrollHandler from './handlers/scrollHandler/';
 
 const initialiseListeners = () => {
@@ -11,7 +11,7 @@ const initialiseListeners = () => {
 
   window.addEventListener('scroll', initialisedScrollHandler);
   headerButton.addEventListener('click', headerHandler());
-  scrollDown.addEventListener('click', scrollDownHandler);
+  scrollDown.addEventListener('click', clickToScrollHandler);
 };
 
 export default initialiseListeners;
