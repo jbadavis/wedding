@@ -82,6 +82,17 @@ a {
   }
 }
 
+a.light {
+  color: $grey-one;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $grey-one;
+  }
+}
+
 .mj-a {
   position: relative;
 

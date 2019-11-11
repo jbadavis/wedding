@@ -8,6 +8,9 @@
   .mj-footer-copy {
     @include centre-content;
 
+    display:flex;
+    justify-content: space-between;
+
     color: $grey-one;
     font-weight: 700;
     letter-spacing: 2.3px;
