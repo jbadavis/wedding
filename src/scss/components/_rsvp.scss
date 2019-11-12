@@ -6,7 +6,7 @@
   right: 30px;
 
   .mj-rsvp-content {
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   }
 
   .mj-button {
@@ -29,6 +29,8 @@
     .mj-rsvp-content {
       opacity: 0;
       transform: translateY(30px);
+
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     }
   }
 }

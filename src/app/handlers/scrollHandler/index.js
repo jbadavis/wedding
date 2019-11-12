@@ -8,6 +8,8 @@ const initScrollHandler = () => {
   const rsvpEl = document.getElementById('rsvp');
   const footerEl = document.getElementById('footer');
 
+  animateOnScroll(elsToAnimate);
+
   return () => {
     animateOnScroll(elsToAnimate);
 
