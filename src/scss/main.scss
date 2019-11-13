@@ -40,10 +40,11 @@ button {
   padding: 0px;
 }
 
-.mj-main {
+#main {
   transition: transform 0.7s ease-in-out;
 
   .nav-open & {
+    cursor: pointer; 
     transform: translateX($navigation-width);
   }
 }
