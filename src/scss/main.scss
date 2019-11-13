@@ -41,10 +41,12 @@ button {
 }
 
 #main {
-  transition: transform 0.7s ease-in-out;
+  filter: brightness(1);
+  transition: filter 0.7s ease-in-out, transform 0.7s ease-in-out;
 
   .nav-open & {
     cursor: pointer; 
+    filter: brightness(0.5);
     transform: translateX($navigation-width);
   }
 }
