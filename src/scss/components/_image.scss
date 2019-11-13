@@ -5,7 +5,10 @@
   width: 80%;
 
   @media (min-width: $breakpoint-two) {
+    &.smaller {
+      width: 80%;
+    }
+
     width: 100%;
   }
 }
-
