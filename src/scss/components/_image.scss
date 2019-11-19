@@ -12,3 +12,10 @@
     width: 100%;
   }
 }
+
+figure {
+  figcaption {
+    margin-top: $margin-four; 
+    font-weight: 600;
+  }
+}
