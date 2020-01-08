@@ -1,20 +1,20 @@
-import {parse} from 'url';
+import { parse } from "url";
 
 const parsePath = path =>
   path
-    .split('/')
+    .split("/")
     .filter(el => el)
     .pop();
 
 const setPage = () => {
-  const navLinks = document.getElementsByClassName('mj-nav-link');
-  const {path} = parse(window.location.href);
+  const navLinks = document.getElementsByClassName("mj-nav-link");
+  const { path } = parse(window.location.href);
 
   [...navLinks].forEach(link => {
     if (
-      parsePath(link.getAttribute('href')) === parsePath(path.toLowerCase())
+      parsePath(link.getAttribute("href")) === parsePath(path.toLowerCase())
     ) {
-      link.classList.add('current');
+      link.classList.add("current");
     }
   });
 };

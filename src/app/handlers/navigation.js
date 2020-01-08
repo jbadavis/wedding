@@ -1,16 +1,12 @@
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const NAV_OPEN_CLASS = 'nav-open';
+const NAV_OPEN_CLASS = "nav-open";
 
 class Navigation {
   navOpen = false;
-  navEl = document.getElementById('nav');
-  htmlEl = document.getElementsByTagName('html')[0];
-  mainEl = document.getElementById('main');
+  navEl = document.getElementById("nav");
+  htmlEl = document.getElementsByTagName("html")[0];
+  mainEl = document.getElementById("main");
 
   enableScroll() {
     enableBodyScroll(this.navEl);
@@ -26,7 +22,7 @@ class Navigation {
     this.disableScroll();
 
     this.navOpen = true;
-  }
+  };
 
   close = () => {
     this.htmlEl.classList.remove(NAV_OPEN_CLASS);
@@ -34,7 +30,7 @@ class Navigation {
     this.enableScroll();
 
     this.navOpen = false;
-  }
+  };
 
   toggle = () => {
     if (this.navOpen) {
@@ -42,7 +38,7 @@ class Navigation {
     } else {
       this.open();
     }
-  }
+  };
 }
 
 export default Navigation;

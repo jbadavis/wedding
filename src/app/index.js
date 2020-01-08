@@ -1,5 +1,5 @@
-import setPage from './setPage';
-import initListeners from './initListeners';
+import setPage from "./setPage";
+import initListeners from "./initListeners";
 
 (() => {
   setPage();

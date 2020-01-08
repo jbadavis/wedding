@@ -1,5 +1,5 @@
 const keyDownHandler = navigation => e => {
-  if (e.key === 'Escape' && navigation.navOpen) {
+  if (e.key === "Escape" && navigation.navOpen) {
     navigation.close();
   }
 };
