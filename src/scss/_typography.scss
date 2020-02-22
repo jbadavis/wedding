@@ -134,6 +134,10 @@ li {
   }
 }
 
+em {
+  font-weight: 700;
+}
+
 @media (min-width: $breakpoint-one) {
   li {
     line-height: 1.8;

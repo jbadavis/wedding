@@ -93,5 +93,9 @@
       "link": "/gifts",
       "newPage": false
     }
-  ]
+  ],
+  "giftList": {
+    "link": "https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/BuyGifts/GuestFindAList.jsp",
+    "number": "779262"
+  }
 }

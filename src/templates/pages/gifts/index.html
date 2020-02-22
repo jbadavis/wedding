@@ -3,10 +3,27 @@
   <div class="mj-hero-content centre">
     <div class="animate animate-hero">
       <h1>Gifts</h1>
-      <h2>List coming soon, start saving!</h2>
     </div>
   </div>
   {% include "partials/scroll-down.njk" %}
 </section>
-<section class="mj-section blue"></section>
+<section class="mj-section blue">
+  <div class="mj-section-content">
+    <div class="animate animate-in">
+      <h2 class="bold">Gifts</h2>
+      <p>
+        If you'd like to purchase a gift for us and help us achieve material
+        marital bliss please use the link below:
+      </p>
+      <a class="mj-button" target="_blank" href="{{ giftList.link }}">
+        Gift List
+      </a>
+      <p>The list number is <em>{{ giftList.number }}</em></p>
+      <p>
+        Alternatively, we would be very grateful for any contributions
+        towards our honeymoon in Vancouver!
+      </p>
+    </div>
+  </div>
+</section>
 {% endblock %}
