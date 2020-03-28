@@ -12,17 +12,22 @@
     <div class="animate animate-in">
       <h2 class="bold">Gifts</h2>
       <p>
-        If you'd like to purchase a gift for us and help us achieve material
-        marital bliss please use the link below:
+        Thank you if you had already purchased us a gift. As we're not actually
+        married (yet) we don't feel receiving these would be appropriate! The
+        gift list is frozen and John Lewis will refund you through a short,
+        convenient phone call.
       </p>
-      <a class="mj-button" target="_blank" href="{{ giftList.link }}">
-        Gift List
-      </a>
-      <p>The list number is <em>{{ giftList.number }}</em></p>
       <p>
-        Alternatively, we would be very grateful for any contributions
-        towards our honeymoon in Vancouver!
+        We're sorry for the inconvenience and please let us know if you
+        experience any problems.
       </p>
+      <p>
+        Please quote the gift list number (<em>{{ giftList.number }}</em>) when
+        you call.
+      </p>
+      <a class="mj-button" href="tel:{{ giftList.phoneNumber }}">
+        Call John Lewis
+      </a>
     </div>
   </div>
 </section>

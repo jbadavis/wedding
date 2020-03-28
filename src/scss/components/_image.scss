@@ -1,7 +1,6 @@
 .mj-image {
   border: 4px solid $black-one;
   display: block;
-  margin: 5px 0 $margin-three;
   width: 80%;
 
   @media (min-width: $breakpoint-two) {
@@ -14,6 +13,8 @@
 }
 
 figure {
+  padding-top: $margin-four;
+
   figcaption {
     margin-top: $margin-four; 
     font-weight: 600;

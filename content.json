@@ -1,6 +1,6 @@
 {
   "pageTitle": "Maddie and Jack's Wedding",
-  "rsvpLink": "https://docs.google.com/forms/d/e/1FAIpQLSfMHiQD79DjZKam_of0nMmylDPkXGQ45a5fOU6mCgxgecdF-A/viewform",
+  "rsvpLink": "https://docs.google.com/forms/d/19XfV81JkslCTqcDFWgAIP6oAr8PbZB_ZxIOtvHrL-K8",
   "hotels": [
     {
       "title": "Premier Inn",
@@ -96,6 +96,7 @@
   ],
   "giftList": {
     "link": "https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/BuyGifts/GuestFindAList.jsp",
-    "number": "779262"
+    "number": "779262",
+    "phoneNumber": "03456002202"
   }
 }
